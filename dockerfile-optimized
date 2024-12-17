@@ -1,0 +1,21 @@
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm ci ; npm cache clean --force
+
+FROM alpine
+
+RUN apk add --no-cache nodejs
+
+WORKDIR /app
+
+COPY --from=builder /app/node_modules ./node_modules
+
+COPY . .
+
+EXPOSE 80
+
+ENTRYPOINT [ "node","server.js"]
