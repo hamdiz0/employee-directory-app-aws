@@ -197,3 +197,5 @@ It runs as a Docker container on an EC2 instance.
 <img src="./imgs/4.png" style="width:100%">
 
 <img src="./imgs/5.png" style="width:100%">
+
+## Checkout my <a href="https://github.com/hamdiz0/LearningDevOps">LearningDevops</a> repo for more details about these tools and devops in general do not hesitate to contribute
