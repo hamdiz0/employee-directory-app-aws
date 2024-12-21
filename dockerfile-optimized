@@ -1,3 +1,4 @@
+# build stage
 FROM node:20-alpine AS builder
 
 WORKDIR /app
@@ -6,6 +7,7 @@ COPY package*.json ./
 
 RUN npm ci ; npm cache clean --force
 
+# deploy stage
 FROM alpine
 
 RUN apk add --no-cache nodejs
