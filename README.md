@@ -20,6 +20,17 @@ It runs as a Docker container on an EC2 instance.
 
 ## Dockerizing the app :
 
+* added the necessary environment variables to the `.env` file <a href="./env.example">.env.example</a>
+
+    ```
+    NODE_ENV= "production ,development"
+    PORT= "port number"
+    AWS_PROFILE=default
+    PHOTOS_BUCKET= "bucket-name"
+    DEFAULT_AWS_REGION= "region"
+    TABLE_NAME= "name of the database table"
+    ```
+
 * built two docker file versions :
 
     - simplified version <a href="./dockerfile">dockerfile</a>
@@ -37,7 +48,6 @@ It runs as a Docker container on an EC2 instance.
     ```
     docker push hamdiz0/empdir-app
     ```
-
 ## Deploying on AWS :
 
 ### Setting up a VPC :
