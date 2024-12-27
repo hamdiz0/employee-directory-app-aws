@@ -240,9 +240,11 @@ It runs as a Docker container on an EC2 instance.
 
     ```
     http://<ALB_DNS_NAME>
-    ``
+    ```
 
-### Setting up  a launsh template :
+    <img src="./imgs/lb.png" style="width:100%">
+
+### Setting up  a launsh template : 
 
 * configure the template with the AMI from the previous EC2 instance along with network settings , IAM role and user data (launching script)
 
@@ -260,7 +262,7 @@ It runs as a Docker container on an EC2 instance.
 
     <img src="./imgs/sg-net.png" style="width:100%">
 
-* attach the load balancer target group
+* attach the load balancer and the target group
 
     <img src="./imgs/sg-lb.png" style="width:100%">
 
@@ -268,11 +270,17 @@ It runs as a Docker container on an EC2 instance.
 
     <img src="./imgs/sg-scal.png" style="width:100%">
 
-* add a scaling policy to scale out and in based on the CPU usage
+* add a scaling policy to scale up and down based on the CPU usage (50% in this case)
 
     <img src="./imgs/sg-scal-pol.png" style="width:100%">
 
 ## Testing the Auto Scaling :
+
+* if you refresh the app page you will notice that the "Availability Zone" along with the "EC2 Instance Id" values change indicating that the app is being served by different instances
+
+    <img src="./imgs/3a.png" style="width:100%">
+
+    <img src="./imgs/3b.png" style="width:100%">
 
 * the app has a built in stress feature that uses the stress linux utility to simulate high CPU usage
 
