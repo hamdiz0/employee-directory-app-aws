@@ -7,6 +7,7 @@ Auto Scaling adjusts the number of EC2 instances based on CPU usage, while an Ap
 
 - [Prerequisites](#prerequisites-)
 - [Dockerizing the app](#dockerizing-the-app-)
+- [Architecture](#architecture-)
 - [Deploying on AWS](#deploying-on-aws-)
     - [Setting up a VPC](#setting-up-a-vpc-)
     - [Configuring IAM roles and security groups](#configuring-iam-roles-and-security-groups-)
@@ -55,6 +56,10 @@ Auto Scaling adjusts the number of EC2 instances based on CPU usage, while an Ap
     ```
     docker push hamdiz0/empdir-app
     ```
+## Architecture :
+
+<img src="./imgs/empdir.png" style="width:100%">
+
 ## Deploying on AWS :
 
 ### Setting up a VPC :
