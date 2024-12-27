@@ -1,8 +1,9 @@
 # Employee directory app on aws
 
-A simple and scalable employee directory application deployed on AWS. 
-The app allows you to view and manage employee information along with photos stored in an S3 bucket and data stored in DynamoDB. 
-It runs as a Docker container on an EC2 instance.
+A simple and scalable employee directory application deployed on AWS, allowing you to view and manage employee information with photos stored in S3 and data in DynamoDB. 
+Running as a Docker container on an EC2 instance within a VPC with subnets across multiple availability zones for high availability, it uses an Internet Gateway for internet access. 
+Security groups and IAM roles ensure secure resource access. 
+Auto Scaling adjusts the number of EC2 instances based on CPU usage, while an Application Load Balancer distributes traffic for reliability and performance.
 
 - [Prerequisites](#prerequisites-)
 - [Dockerizing the app](#dockerizing-the-app-)
