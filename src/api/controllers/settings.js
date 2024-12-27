@@ -28,8 +28,8 @@ exports.getSettings = async (req, res, next) => {
 exports.stressServer = (req, res, next) => {
   try {
     const secsParam = req.body['seconds'];
-    // console.log('settings::stressServer');
-    // console.log('Running process for seconds: ' + seconds);
+    console.log('settings::stressServer');
+    console.log('Running process for seconds: ' + seconds);
     const seconds = parseInt(secsParam);
     if (Number.isNaN(seconds)) {
       res
