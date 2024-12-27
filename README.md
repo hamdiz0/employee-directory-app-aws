@@ -276,20 +276,28 @@ It runs as a Docker container on an EC2 instance.
 
 * the app has a built in stress feature that uses the stress linux utility to simulate high CPU usage
 
+* start the stress test by clicking the "Stress Application Server For" button
+
     <img src="./imgs/stress.png" style="width:100%">
 
-* target group before scaling
+* the number of instances before starting the stress test
 
     <img src="./imgs/before-scal.png" style="width:100%">
 
-* target group after scaling
+* the number of instaces increases when the CPU usage exceeds the threshold from 2 to 4 instances
 
     <img src="./imgs/after-scal.png" style="width:100%">
 
-* the cpu usage drops drastically after the scaling
+    <img src="./imgs/scal-up.png" style="width:100%">
+
+* the cpu usage drops drastically after the app scales up
 
     <img src="./imgs/stress-after-scal.png" style="width:100%">
-    
+
+* after the stress test is done the number of instances goes back to the initial value
+
+    <img src="./imgs/scal-down.png" style="width:100%">
+
 ## Results :
 
 * Application
