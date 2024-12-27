@@ -11,6 +11,12 @@ It runs as a Docker container on an EC2 instance.
     - [Configuring IAM roles and security groups](#configuring-iam-roles-and-security-groups-)
     - [Setting up S3 and DynamoDB](#setting-up-s3-and-dynamodb-)
     - [Launching an EC2 instance](#launching-an-ec2-instance-)
+- [Auto Scaling](#auto-scaling-) 
+    - [Setting up a Target Group](#setting-up-a-target-group-)
+    - [Creating a Load Balancer](#creating-a-load-balancer-)
+    - [Setting up  a launsh template](#setting-up--a-launsh-template-)
+    - [Creating an Auto Scaling Group](#creating-an-auto-scaling-group-)
+- [Testing the Auto Scaling](#testing-the-auto-scaling-)
 - [Results](#results-)
 
 ## Prerequisites :
@@ -89,7 +95,7 @@ It runs as a Docker container on an EC2 instance.
 
     <img src="./imgs/upload.png" style="width:100%"> 
 
-* add a policy to the bucket in the permissions tab
+* add a policy to the bucket in the permissions tab to allow the EC2 instance to access the bucket using the IAM role
 
     ```
     {
@@ -110,7 +116,7 @@ It runs as a Docker container on an EC2 instance.
         ]
     }
     ```
-* add CROS configuration to the bucket to avoid request issues
+* add CROS configuration to the bucket to avoid request issues 
 
     ```
     [
@@ -128,7 +134,7 @@ It runs as a Docker container on an EC2 instance.
     ]
     ```
 
-* add a DynamoDB table to store the employee information
+* add a DynamoDB table to store the employee information 
 
     <img src="./imgs/dynamo.png" style="width:100%">
 
