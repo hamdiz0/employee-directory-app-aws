@@ -142,13 +142,17 @@ Auto Scaling adjusts the number of EC2 instances based on CPU usage, while an Ap
 ### Launching an EC2 instance :
 
 * launch the instance on a public subnet of the created VPC
-* attach the security group
+* attach the security group 
 
     <img src="./imgs/ec2-net.png" style="width:100%">
 
 * add the "s3dynamodbfullaccess" role to the EC2
 
     <img src="./imgs/ec2-addrole.png" style="width:100%">
+
+* make sure the Metadata service is enabled with both versions v1 and v2 allowing the app to retrieve the instance metadata
+
+    <img src="./imgs/v1andv2.png" style="width:100%">    
 
 * add a script in the user data field to launch the app automaticly when the instance done creating 
 
